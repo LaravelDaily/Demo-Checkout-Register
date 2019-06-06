@@ -19,6 +19,12 @@
                             <br/>
                         @endif
 
+                        @if (session()->has('product'))
+                            <div class="alert alert-info">You have {{ session('product')['name'] }} in cart. <a
+                                        href="{{ route('checkout') }}">Checkout</a></div>
+                            <br/>
+                        @endif
+
                         <table class="table" id="datatable">
                             <thead>
                             <tr>
@@ -34,7 +40,7 @@
                                     <td>{{ $product->price }}</td>
                                     <td>
                                         <a class="btn btn-sm btn-danger"
-                                           href="#">Buy</a>
+                                           href="{{ route('products.buy', $product->id) }}">Buy</a>
                                     </td>
                                 </tr>
                             @empty

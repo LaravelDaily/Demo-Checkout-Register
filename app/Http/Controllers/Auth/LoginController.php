@@ -25,7 +25,14 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected function redirectTo()
+    {
+        if (session()->has('product')) {
+            return '/checkout';
+        } else {
+            return '/';
+        }
+    }
 
     /**
      * Create a new controller instance.
