@@ -87,7 +87,7 @@ class ProductController extends Controller
 
     public function buy(Product $product)
     {
-        session(['product' => ['name' => $product->name, 'price' => $product->price]]);
+        session(['product' => ['product_id' => $product->id, 'name' => $product->name, 'price' => $product->price]]);
 
         return redirect()->route('products.index');
     }

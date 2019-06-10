@@ -12,9 +12,8 @@
                             <div>Email: {{ auth()->user()->email }}</div>
                             <br>
                             <div>
-                                <button type="submit" class="btn btn-danger">
-                                    Place order
-                                </button>
+                                <a class="btn btn-danger"
+                                   href="{{ route('checkout.order', session('product')['product_id']) }}">Place order</a>
                             </div>
                         </div>
                     </div>
