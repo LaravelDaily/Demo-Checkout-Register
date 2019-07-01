@@ -41,9 +41,9 @@
                                            class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="email" type="email"
-                                               class="form-control @error('email') is-invalid @enderror" name="email"
-                                               value="{{ old('email') }}" required autocomplete="email" autofocus>
+<input id="email" type="email"
+       class="form-control @error('email') is-invalid @enderror" name="email"
+       value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -127,13 +127,13 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="register_email"
+                                    <label for="email"
                                            class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="register_email" type="email"
-                                               class="form-control @error('register_email') is-invalid @enderror" name="register_email"
-                                               value="{{ old('register_email') }}" required autocomplete="email">
+<input id="email" type="email"
+       class="form-control @error('email') is-invalid @enderror" name="email"
+       value="{{ old('email') }}" required autocomplete="email">
 
                                         @error('register_email')
                                         <span class="invalid-feedback" role="alert">
